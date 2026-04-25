@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог — ВиниловыйМир</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <div class="logo">Виниловый<span class="logo-accent">Мир</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Каталог</h1>
+                <p>Полная коллекция виниловых пластинок</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOG SECTION -->
+    <section class="section">
+        <div class="container">
+            <!-- SEARCH AND FILTERS -->
+            <div style="margin-bottom: 32px;">
+                <div class="form-group" style="margin-bottom: 24px;">
+                    <input type="text" id="search-input" placeholder="Поиск по названию или исполнителю...">
+                </div>
+
+                <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                    <label for="sort-select" style="margin: 0;">Сортировка:</label>
+                    <select id="sort-select">
+                        <option value="price-asc">Цена: по возрастанию</option>
+                        <option value="price-desc">Цена: по убыванию</option>
+                        <option value="title">По названию</option>
+                    </select>
+                </div>
+
+                <div style="margin-top: 24px;">
+                    <p style="margin-bottom: 12px; color: #b0b0b0;">Жанры:</p>
+                    <div class="filter-group">
+                        <button class="filter-btn" data-filter="all">Все</button>
+                        <button class="filter-btn" data-filter="jazz">Джаз</button>
+                        <button class="filter-btn" data-filter="rock">Рок</button>
+                        <button class="filter-btn" data-filter="classic">Классика</button>
+                        <button class="filter-btn" data-filter="electronic">Электроника</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCTS GRID -->
+            <div class="grid grid-4" id="product-grid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <div class="footer-social">
+                <a href="#" class="social-icon">📷</a>
+                <a href="#" class="social-icon">▶️</a>
+            </div>
+            <p class="footer-copyright">© 2024 ВиниловыйМир. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

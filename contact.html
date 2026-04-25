@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — ВиниловыйМир</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <div class="logo">Виниловый<span class="logo-accent">Мир</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Контакты</h1>
+                <p>Свяжитесь с нами</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 80px;">
+                <!-- CONTACT FORM -->
+                <div>
+                    <h2>Напишите нам</h2>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Имя *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Тема</label>
+                            <input type="text" id="subject" name="subject" placeholder="Тема сообщения">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Сообщение *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Отправить</button>
+                    </form>
+                </div>
+
+                <!-- CONTACT INFO -->
+                <div>
+                    <h2>Информация</h2>
+
+                    <div style="margin-bottom: 32px;">
+                        <h3 style="margin-bottom: 8px;">Адрес</h3>
+                        <p>ул. Арбат, 24<br>Москва, 119002<br>Россия</p>
+                    </div>
+
+                    <div style="margin-bottom: 32px;">
+                        <h3 style="margin-bottom: 8px;">Телефон</h3>
+                        <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                    </div>
+
+                    <div style="margin-bottom: 32px;">
+                        <h3 style="margin-bottom: 8px;">Email</h3>
+                        <p><a href="mailto:info@vinylmire.ru">info@vinylmire.ru</a></p>
+                    </div>
+
+                    <div style="margin-bottom: 32px;">
+                        <h3 style="margin-bottom: 8px;">Часы работы</h3>
+                        <p>Пн-Пт: 10:00 - 20:00<br>Сб: 11:00 - 19:00<br>Вс: Выходной</p>
+                    </div>
+
+                    <div>
+                        <h3 style="margin-bottom: 8px;">Социальные сети</h3>
+                        <div class="footer-social" style="justify-content: flex-start;">
+                            <a href="#" class="social-icon">📷</a>
+                            <a href="#" class="social-icon">▶️</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAP PLACEHOLDER -->
+            <div style="background: linear-gradient(135deg, #4a7ba7 0%, #2d4a6a 100%); border-radius: 4px; height: 400px; display: flex; align-items: center; justify-content: center; margin-bottom: 80px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 64px; margin-bottom: 16px;">📍</div>
+                    <p style="color: #ffffff; font-size: 18px;">Карта магазина</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section" style="background: #1a1a1a;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Часто задаваемые вопросы</h2>
+                <p>Ответы на популярные вопросы</p>
+            </div>
+
+            <div class="accordion" style="max-width: 800px; margin: 0 auto;">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">Как оформить заказ?</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-text">
+                            Выберите пластинку из каталога, нажмите кнопку "В корзину", заполните форму заказа с вашими контактными данными и способом доставки. Мы свяжемся с вами в течение 2 часов для подтверждения.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">Какие способы оплаты доступны?</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-text">
+                            Мы принимаем оплату банковскими картами (Visa, Mastercard), переводы через Яндекс.Касса, а также наличный расчёт при самовывозе из магазина.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">Как осуществляется доставка?</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-text">
+                            Доставка осуществляется по Москве и области. Стоимость доставки зависит от расстояния. При заказе от 5 000 ₽ доставка бесплатна. Также возможен самовывоз из нашего магазина на ул. Арбат, 24.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">Можно ли вернуть пластинку?</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-text">
+                            Да, вы можете вернуть пластинку в течение 14 дней с момента покупки, если она не была распакована и не использована. Пластинка должна быть в том же состоянии, в котором вы её получили.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">Есть ли у вас прослушивальная комната?</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-text">
+                            Да! Мы открыли прослушивальную комнату в 2018 году. Здесь вы можете прослушать пластинку перед покупкой на профессиональном оборудованием. Запись на сеанс: +7 (495) 123-45-67.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">Как определить состояние пластинки?</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-text">
+                            Мы используют стандартную шкалу оценки состояния виниловых пластинок: Mint (идеальное), Near Mint (почти идеальное), Very Good (очень хорошее), Good (хорошее), Fair (удовлетворительное), Poor (плохое). Каждая пластинка в нашем магазине имеет подробное описание состояния.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <div class="footer-social">
+                <a href="#" class="social-icon">📷</a>
+                <a href="#" class="social-icon">▶️</a>
+            </div>
+            <p class="footer-copyright">© 2024 ВиниловыйМир. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('.accordion-icon');
+
+                // Close other accordions
+                document.querySelectorAll('.accordion-header').forEach(otherHeader => {
+                    if (otherHeader !== header) {
+                        const otherContent = otherHeader.nextElementSibling;
+                        const otherIcon = otherHeader.querySelector('.accordion-icon');
+                        otherContent?.classList.remove('open');
+                        otherIcon?.classList.remove('open');
+                    }
+                });
+
+                // Toggle current accordion
+                content?.classList.toggle('open');
+                icon?.classList.toggle('open');
+            });
+        });
+
+        // Form validation
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !phone || !message) {
+                alert('Пожалуйста, заполните все обязательные поля!');
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Пожалуйста, введите корректный email!');
+                return;
+            }
+
+            if (phone.replace(/\D/g, '').length < 10) {
+                alert('Пожалуйста, введите корректный номер телефона!');
+                return;
+            }
+
+            alert('Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.');
+            document.getElementById('contact-form').reset();
+        });
+    </script>
+</body>
+</html>

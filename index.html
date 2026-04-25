@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВиниловыйМир — Магазин виниловых пластинок</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <div class="logo">Виниловый<span class="logo-accent">Мир</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Звук, который остаётся навсегда</h1>
+                <p>Коллекция редких и ценных виниловых пластинок для истинных меломанов</p>
+                <a href="catalog.html" class="btn btn-primary btn-large">Перейти в каталог</a>
+            </div>
+            <div class="vinyl-spinner">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer ring -->
+                    <circle cx="100" cy="100" r="95" fill="none" stroke="#d4af37" stroke-width="2"/>
+                    <!-- Vinyl record -->
+                    <circle cx="100" cy="100" r="80" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+                    <!-- Grooves -->
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="#333333" stroke-width="0.5" opacity="0.5"/>
+                    <circle cx="100" cy="100" r="60" fill="none" stroke="#333333" stroke-width="0.5" opacity="0.5"/>
+                    <circle cx="100" cy="100" r="50" fill="none" stroke="#333333" stroke-width="0.5" opacity="0.5"/>
+                    <circle cx="100" cy="100" r="40" fill="none" stroke="#333333" stroke-width="0.5" opacity="0.5"/>
+                    <!-- Center label -->
+                    <circle cx="100" cy="100" r="25" fill="#d4af37"/>
+                    <circle cx="100" cy="100" r="15" fill="#0a0a0a"/>
+                    <text x="100" y="105" text-anchor="middle" font-size="8" fill="#d4af37" font-weight="bold">VM</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Рекомендуемые альбомы</h2>
+                <p>Лучшие пластинки из нашей коллекции</p>
+            </div>
+            <div class="grid grid-4" id="featured-grid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- GENRES SECTION -->
+    <section class="section" style="background: linear-gradient(180deg, rgba(26, 26, 26, 0.5) 0%, rgba(10, 10, 10, 0.5) 100%);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Жанры</h2>
+                <p>Выберите интересующий вас жанр</p>
+            </div>
+            <div class="grid grid-4" style="animation: fadeIn 0.8s ease 0.2s backwards;">
+                <div class="product-card" style="cursor: pointer;" onclick="window.location.href='catalog.html?genre=jazz'">
+                    <div class="product-image" style="background: linear-gradient(135deg, #4a7ba7 0%, #2d4a6a 100%);">
+                        🎷
+                    </div>
+                    <h3 style="margin: 0; text-align: center;">Джаз</h3>
+                    <p style="text-align: center; margin: 0; color: #b0b0b0;">Классический и современный джаз</p>
+                </div>
+                <div class="product-card" style="cursor: pointer;" onclick="window.location.href='catalog.html?genre=rock'">
+                    <div class="product-image" style="background: linear-gradient(135deg, #8b6f47 0%, #5a4a2f 100%);">
+                        🎸
+                    </div>
+                    <h3 style="margin: 0; text-align: center;">Рок</h3>
+                    <p style="text-align: center; margin: 0; color: #b0b0b0;">От классического до альтернативного</p>
+                </div>
+                <div class="product-card" style="cursor: pointer;" onclick="window.location.href='catalog.html?genre=classic'">
+                    <div class="product-image" style="background: linear-gradient(135deg, #6b4c8a 0%, #3d2a52 100%);">
+                        🎻
+                    </div>
+                    <h3 style="margin: 0; text-align: center;">Классика</h3>
+                    <p style="text-align: center; margin: 0; color: #b0b0b0;">Классическая музыка</p>
+                </div>
+                <div class="product-card" style="cursor: pointer;" onclick="window.location.href='catalog.html?genre=electronic'">
+                    <div class="product-image" style="background: linear-gradient(135deg, #5a8a6f 0%, #2d5a45 100%);">
+                        🎛️
+                    </div>
+                    <h3 style="margin: 0; text-align: center;">Электроника</h3>
+                    <p style="text-align: center; margin: 0; color: #b0b0b0;">Электронная музыка</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT PREVIEW SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>О магазине</h2>
+                <p>Добро пожаловать в ВиниловыйМир</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+                <div style="animation: slideInLeft 0.8s ease 0.2s backwards;">
+                    <p>ВиниловыйМир — это магазин для истинных меломанов и коллекционеров виниловых пластинок. Мы предлагаем редкие и ценные издания, от классического джаза до современной электроники.</p>
+                    <p>Каждая пластинка в нашей коллекции тщательно отобрана и проверена. Мы гарантируем подлинность и качество каждого товара.</p>
+                    <p>Наша миссия — сохранить и популяризировать культуру виниловой музыки, помогая людям открывать новые звуки и переживать музыку так, как она была задумана.</p>
+                    <a href="about.html" class="btn btn-secondary">Узнать больше</a>
+                </div>
+                <div style="animation: slideInRight 0.8s ease 0.2s backwards;">
+                    <div style="background: linear-gradient(135deg, #4a7ba7 0%, #2d4a6a 100%); border-radius: 8px; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 120px; box-shadow: 0 12px 40px rgba(212, 175, 55, 0.2); animation: float 3s ease-in-out infinite;">
+                        🎵
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <div class="footer-social">
+                <a href="#" class="social-icon">📷</a>
+                <a href="#" class="social-icon">▶️</a>
+            </div>
+            <p class="footer-copyright">© 2024 ВиниловыйМир. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple featured products
+        document.addEventListener('DOMContentLoaded', () => {
+            const featured = [
+                { title: 'Kind of Blue', artist: 'Miles Davis', price: '4 200 ₽' },
+                { title: 'The Dark Side', artist: 'Pink Floyd', price: '5 800 ₽' },
+                { title: 'Goldberg Variations', artist: 'Glenn Gould', price: '6 800 ₽' },
+                { title: 'Discovery', artist: 'Daft Punk', price: '3 500 ₽' }
+            ];
+
+            const grid = document.getElementById('featured-grid');
+            if (grid) {
+                grid.innerHTML = featured.map((item, i) => `
+                    <div class="product-card">
+                        <div class="product-image" style="background: linear-gradient(135deg, hsl(${i * 90}, 50%, 40%) 0%, hsl(${i * 90}, 50%, 20%) 100%);">
+                            🎵
+                        </div>
+                        <div class="product-title">${item.title}</div>
+                        <div class="product-artist">${item.artist}</div>
+                        <div class="product-price">${item.price}</div>
+                        <div class="product-status">Mint • В наличии</div>
+                        <div class="product-actions">
+                            <button class="btn btn-icon">♡</button>
+                            <button class="btn btn-icon">🛒</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        });
+    </script>
+</body>
+</html>
