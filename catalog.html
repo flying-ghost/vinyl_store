@@ -26,49 +26,72 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
+    <!-- CATALOG SECTION -->
+    <section class="section" style="padding-top: 40px;">
         <div class="container">
-            <div class="hero-content">
-                <h1>Каталог</h1>
+            <div class="section-title">
+                <h2>Каталог пластинок</h2>
                 <p>Полная коллекция виниловых пластинок</p>
             </div>
-        </div>
-    </section>
 
-    <!-- CATALOG SECTION -->
-    <section class="section">
-        <div class="container">
-            <!-- SEARCH AND FILTERS -->
-            <div style="margin-bottom: 32px;">
-                <div class="form-group" style="margin-bottom: 24px;">
-                    <input type="text" id="search-input" placeholder="Поиск по названию или исполнителю...">
+            <!-- FILTERS -->
+            <div style="background: rgba(26, 26, 26, 0.5); padding: 24px; border-radius: 8px; margin-bottom: 32px;">
+                <!-- Search -->
+                <div class="search-box" style="margin-bottom: 24px;">
+                    <input type="text" id="searchInput" placeholder="Поиск по названию, артисту или каталогу...">
                 </div>
 
-                <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-                    <label for="sort-select" style="margin: 0;">Сортировка:</label>
-                    <select id="sort-select">
-                        <option value="price-asc">Цена: по возрастанию</option>
-                        <option value="price-desc">Цена: по убыванию</option>
-                        <option value="title">По названию</option>
-                    </select>
+                <!-- Genre Filter -->
+                <div style="margin-bottom: 24px;">
+                    <label style="display: block; margin-bottom: 12px;">Жанр:</label>
+                    <div class="filter-group" id="genreFilter"></div>
                 </div>
 
-                <div style="margin-top: 24px;">
-                    <p style="margin-bottom: 12px; color: #b0b0b0;">Жанры:</p>
-                    <div class="filter-group">
-                        <button class="filter-btn" data-filter="all">Все</button>
-                        <button class="filter-btn" data-filter="jazz">Джаз</button>
-                        <button class="filter-btn" data-filter="rock">Рок</button>
-                        <button class="filter-btn" data-filter="classic">Классика</button>
-                        <button class="filter-btn" data-filter="electronic">Электроника</button>
+                <!-- Format Filter -->
+                <div style="margin-bottom: 24px;">
+                    <label style="display: block; margin-bottom: 12px;">Формат:</label>
+                    <div class="filter-group" id="formatFilter">
+                        <button class="filter-btn active" data-filter="all">Все</button>
+                        <button class="filter-btn" data-filter="LP">LP</button>
+                        <button class="filter-btn" data-filter="EP">EP</button>
+                        <button class="filter-btn" data-filter="7&quot;">7"</button>
+                        <button class="filter-btn" data-filter="12&quot;">12"</button>
                     </div>
+                </div>
+
+                <!-- Condition Filter -->
+                <div style="margin-bottom: 24px;">
+                    <label style="display: block; margin-bottom: 12px;">Состояние:</label>
+                    <div class="filter-group" id="conditionFilter">
+                        <button class="filter-btn active" data-filter="all">Все</button>
+                        <button class="filter-btn" data-filter="Новый">Новый</button>
+                        <button class="filter-btn" data-filter="Mint">Mint</button>
+                        <button class="filter-btn" data-filter="Near Mint">Near Mint</button>
+                        <button class="filter-btn" data-filter="Very Good+">Very Good+</button>
+                    </div>
+                </div>
+
+                <!-- Sort -->
+                <div class="sort-group">
+                    <label>Сортировка:</label>
+                    <select id="sortSelect">
+                        <option value="featured">Рекомендуемые</option>
+                        <option value="price-low">Цена: от низкой к высокой</option>
+                        <option value="price-high">Цена: от высокой к низкой</option>
+                        <option value="year-new">Год: новые первыми</option>
+                        <option value="year-old">Год: старые первыми</option>
+                        <option value="title">Название: A-Z</option>
+                    </select>
                 </div>
             </div>
 
             <!-- PRODUCTS GRID -->
-            <div class="grid grid-4" id="product-grid">
-                <!-- Populated by JavaScript -->
+            <div class="grid grid-4" id="productsGrid"></div>
+
+            <!-- NO RESULTS -->
+            <div id="noResults" style="text-align: center; padding: 60px 20px; display: none;">
+                <h3 style="color: #b0b0b0;">Ничего не найдено</h3>
+                <p style="color: #666666;">Попробуйте изменить параметры поиска</p>
             </div>
         </div>
     </section>
@@ -90,6 +113,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/catalog.js"></script>
 </body>
 </html>

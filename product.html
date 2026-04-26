@@ -29,80 +29,65 @@
     <!-- PRODUCT SECTION -->
     <section class="section">
         <div class="container">
-            <a href="catalog.html" class="btn btn-secondary btn-small" style="margin-bottom: 24px;">← Вернуться в каталог</a>
+            <a href="catalog.html" style="color: #d4af37; margin-bottom: 24px; display: inline-block;">← Вернуться в каталог</a>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
-                <!-- PRODUCT IMAGE -->
-                <div>
-                    <div class="product-image" style="height: 400px; margin-bottom: 24px;">
-                        <span class="product-badge" id="product-badge">ДЖАЗ</span>
-                        🎵
-                    </div>
+            <div id="productContent" style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;">
+                <!-- Product Image -->
+                <div id="productImage" style="background: linear-gradient(135deg, #4a7ba7 0%, #2d4a6a 100%); border-radius: 8px; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 200px; box-shadow: 0 12px 40px rgba(212, 175, 55, 0.2);">
+                    🎵
                 </div>
 
-                <!-- PRODUCT INFO -->
+                <!-- Product Info -->
                 <div>
-                    <h1 id="product-title">Название альбома</h1>
-                    <p id="product-artist" style="font-size: 18px; color: #b0b0b0; margin-bottom: 24px;">Исполнитель</p>
+                    <div id="productBadge" style="display: inline-block; background: rgba(212, 175, 55, 0.2); border: 1px solid #d4af37; color: #d4af37; padding: 8px 16px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-bottom: 16px;"></div>
+                    
+                    <h1 id="productTitle" style="margin-bottom: 8px;"></h1>
+                    <div id="productArtist" style="font-size: 18px; color: #b0b0b0; margin-bottom: 24px;"></div>
 
-                    <!-- RATING -->
-                    <div style="margin-bottom: 24px;">
-                        <div class="rating" id="product-rating">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
+                    <div style="background: rgba(26, 26, 26, 0.5); padding: 24px; border-radius: 8px; margin-bottom: 24px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                            <div>
+                                <div style="font-size: 12px; color: #b0b0b0; margin-bottom: 4px;">Год выпуска</div>
+                                <div id="productYear" style="font-size: 16px; font-weight: 600;"></div>
+                            </div>
+                            <div>
+                                <div style="font-size: 12px; color: #b0b0b0; margin-bottom: 4px;">Жанр</div>
+                                <div id="productGenre" style="font-size: 16px; font-weight: 600;"></div>
+                            </div>
+                            <div>
+                                <div style="font-size: 12px; color: #b0b0b0; margin-bottom: 4px;">Формат</div>
+                                <div id="productFormat" style="font-size: 16px; font-weight: 600;"></div>
+                            </div>
+                            <div>
+                                <div style="font-size: 12px; color: #b0b0b0; margin-bottom: 4px;">Состояние</div>
+                                <div id="productCondition" style="font-size: 16px; font-weight: 600;"></div>
+                            </div>
+                            <div>
+                                <div style="font-size: 12px; color: #b0b0b0; margin-bottom: 4px;">Лейбл</div>
+                                <div id="productLabel" style="font-size: 16px; font-weight: 600;"></div>
+                            </div>
+                            <div>
+                                <div style="font-size: 12px; color: #b0b0b0; margin-bottom: 4px;">Страна</div>
+                                <div id="productCountry" style="font-size: 16px; font-weight: 600;"></div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- PRICE -->
-                    <div style="margin-bottom: 24px;">
-                        <p style="color: #b0b0b0; margin-bottom: 8px;">Цена:</p>
-                        <p id="product-price" style="font-size: 32px; color: #d4af37; font-weight: bold; margin: 0;">0 ₽</p>
+                    <div id="productPrice" style="font-size: 32px; font-weight: 600; color: #d4af37; margin-bottom: 24px;"></div>
+
+                    <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+                        <button class="btn btn-primary btn-large" style="flex: 1;">Добавить в корзину</button>
+                        <button class="btn btn-secondary btn-large" style="flex: 1;">♡ Избранное</button>
                     </div>
 
-                    <!-- STATUS -->
-                    <div style="margin-bottom: 24px;">
-                        <p style="color: #b0b0b0; margin-bottom: 8px;">Состояние:</p>
-                        <p id="product-condition" style="font-size: 16px; color: #ffffff; margin: 0;">Mint</p>
-                    </div>
-
-                    <!-- QUANTITY -->
-                    <div style="margin-bottom: 24px;">
-                        <p style="color: #b0b0b0; margin-bottom: 8px;">В наличии:</p>
-                        <p id="product-quantity" style="font-size: 16px; color: #ffffff; margin: 0;">5 шт.</p>
-                    </div>
-
-                    <!-- TAGS -->
-                    <div style="margin-bottom: 24px;">
-                        <p style="color: #b0b0b0; margin-bottom: 8px;">Характеристики:</p>
-                        <div id="product-tags">
-                            <span class="tag">180g Vinyl</span>
-                            <span class="tag">Переиздание</span>
-                        </div>
-                    </div>
-
-                    <!-- ACTIONS -->
-                    <div style="display: flex; gap: 12px;">
-                        <button class="btn btn-primary btn-large" style="flex: 1;" onclick="addToCart()">Добавить в корзину</button>
-                        <button class="btn btn-icon btn-large" onclick="toggleFavorite(this)">♡</button>
-                    </div>
+                    <div id="productDescription" style="color: #b0b0b0; line-height: 1.8; margin-bottom: 24px;"></div>
                 </div>
             </div>
 
-            <!-- DESCRIPTION -->
-            <div style="margin-top: 48px; padding-top: 48px; border-top: 1px solid #333333;">
-                <h2>Описание</h2>
-                <p id="product-description">Описание товара</p>
-            </div>
-
-            <!-- TRACKLIST -->
-            <div style="margin-top: 48px;">
+            <!-- Tracklist -->
+            <div style="margin-top: 60px;">
                 <h2>Трек-лист</h2>
-                <div id="product-tracklist" style="background: #1a1a1a; border: 1px solid #333333; border-radius: 4px; padding: 24px;">
-                    <!-- Populated by JavaScript -->
-                </div>
+                <div id="tracklist" style="background: rgba(26, 26, 26, 0.5); border-radius: 8px; overflow: hidden;"></div>
             </div>
         </div>
     </section>
@@ -124,55 +109,37 @@
         </div>
     </footer>
 
+    <script src="js/data.js"></script>
     <script>
-        // Load product from sessionStorage
-        document.addEventListener('DOMContentLoaded', () => {
-            const product = JSON.parse(sessionStorage.getItem('selectedProduct') || '{}');
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        const product = records.find(r => r.id === productId);
 
-            if (product.id) {
-                document.getElementById('product-title').textContent = product.title;
-                document.getElementById('product-artist').textContent = product.artist;
-                document.getElementById('product-price').textContent = product.price.toLocaleString('ru-RU') + ' ₽';
-                document.getElementById('product-condition').textContent = product.condition;
-                document.getElementById('product-quantity').textContent = product.quantity + ' шт.';
-                document.getElementById('product-description').textContent = product.description || 'Описание товара';
-                document.getElementById('product-badge').textContent = product.badge;
-                document.getElementById('product-badge').style.background = product.badgeColor;
+        if (!product) {
+            document.getElementById('productContent').innerHTML = '<h2 style="grid-column: 1/-1;">Товар не найден</h2>';
+        } else {
+            document.getElementById('productBadge').textContent = product.featured ? '⭐ Рекомендуемое' : product.condition;
+            document.getElementById('productTitle').textContent = product.title;
+            document.getElementById('productArtist').textContent = product.artist;
+            document.getElementById('productYear').textContent = product.year;
+            document.getElementById('productGenre').textContent = product.genre;
+            document.getElementById('productFormat').textContent = product.format;
+            document.getElementById('productCondition').textContent = product.condition;
+            document.getElementById('productLabel').textContent = product.label;
+            document.getElementById('productCountry').textContent = product.country;
+            document.getElementById('productPrice').textContent = product.price.toLocaleString('ru-RU') + ' ₽';
+            document.getElementById('productDescription').textContent = product.description;
 
-                // Render tracklist
-                const tracklist = document.getElementById('product-tracklist');
-                if (product.tracks && product.tracks.length > 0) {
-                    tracklist.innerHTML = product.tracks.map((track, i) => `
-                        <div style="padding: 12px 0; border-bottom: 1px solid #333333; display: flex; justify-content: space-between;">
-                            <span>${i + 1}. ${track}</span>
-                            <span style="color: #b0b0b0;">♪</span>
-                        </div>
-                    `).join('');
-                    tracklist.lastElementChild?.style.borderBottom = 'none';
-                }
-            }
-        });
-
-        function addToCart() {
-            const product = JSON.parse(sessionStorage.getItem('selectedProduct') || '{}');
-            if (product.id) {
-                const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-                const existingItem = cart.find(item => item.id === product.id);
-
-                if (existingItem) {
-                    existingItem.quantity++;
-                } else {
-                    cart.push({ ...product, quantity: 1 });
-                }
-
-                localStorage.setItem('cart', JSON.stringify(cart));
-                alert(product.title + ' добавлен в корзину!');
-            }
-        }
-
-        function toggleFavorite(btn) {
-            btn.classList.toggle('active');
-            btn.textContent = btn.classList.contains('active') ? '♥' : '♡';
+            const tracklistHtml = product.tracklist.map((track, i) => `
+                <div style="padding: 16px; border-bottom: 1px solid rgba(212, 175, 55, 0.1); display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-size: 12px; color: #b0b0b0; margin-bottom: 4px;">Сторона ${track.side} • Трек ${track.number}</div>
+                        <div style="font-weight: 600;">${track.title}</div>
+                    </div>
+                    <div style="color: #b0b0b0; font-size: 14px;">${track.duration}</div>
+                </div>
+            `).join('');
+            document.getElementById('tracklist').innerHTML = tracklistHtml;
         }
     </script>
 </body>
